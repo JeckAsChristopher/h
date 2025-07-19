@@ -8,7 +8,6 @@ gui.Name = "WelcomeOverlay"
 gui.IgnoreGuiInset = true
 gui.ResetOnSpawn = false
 
--- Fullscreen background
 local bg = Instance.new("Frame", gui)
 bg.Size = UDim2.new(1, 0, 1, 0)
 bg.Position = UDim2.new(0, 0, 0, 0)
@@ -17,7 +16,6 @@ bg.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 local uiCorner = Instance.new("UICorner", bg)
 uiCorner.CornerRadius = UDim.new(0, 0)
 
--- Typing label
 local label = Instance.new("TextLabel", bg)
 label.Size = UDim2.new(1, -40, 0, 80)
 label.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -28,7 +26,6 @@ label.Font = Enum.Font.GothamBold
 label.TextScaled = true
 label.Text = ""
 
--- Typing animation
 local fullText = "Made by youcannotsth"
 local typeSpeed = 4
 
@@ -45,7 +42,7 @@ task.spawn(function()
 
 	tweenOutBG:Play()
 	tweenOutLabel:Play()
-	tweenOutBG.Completed:Wait() -- Wait for animation to finish
+	tweenOutBG.Completed:Wait()
 
 	gui:Destroy()
 
