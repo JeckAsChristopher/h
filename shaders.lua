@@ -1,2 +1,198 @@
--- Script was protected by an strong custom obfuscator
-local h=game:GetService("\084\119\101\101\110\083\101\114\118\105\099\101")local B=game:GetService("\080\108\097\121\101\114\115")local g=game:GetService("\083\116\097\114\116\101\114\071\117\105")local K=B.LocalPlayer local d=K:WaitForChild("\080\108\097\121\101\114\071\117\105")pcall(function()g:SetCore("\083\101\110\100\078\111\116\105\102\105\099\097\116\105\111\110",{Title="\069\110\106\111\121\033";Text="\077\097\100\101 \098\121 \121\111\117\099\097\110\110\111\116\115\116\104";Duration=5})end)local x=Instance.new("\083\099\114\101\101\110\071\117\105",d)x.Name="\083\104\097\100\101\114\080\097\110\101\108"x.ResetOnSpawn=false local j=Instance.new("\070\114\097\109\101",x)j.Size=UDim2.new(0,300,0,200)j.Position=UDim2.new(.05,0,.3,0)j.BackgroundColor3=Color3.fromRGB(35,35,35)j.BorderSizePixel=0 j.Active=true j.Draggable=true j.Name="\077\097\105\110\080\097\110\101\108"local f=Instance.new("\085\073\067\111\114\110\101\114",j)f.CornerRadius=UDim.new(0,10)local X=Instance.new("\084\101\120\116\066\117\116\116\111\110",j)X.Size=UDim2.new(1,-90,0,30)X.Position=UDim2.new(0,0,0,0)X.Text="\083\104\097\100\101\114 \080\097\110\101\108"X.TextColor3=Color3.new(1,1,1)X.BackgroundTransparency=1 X.Font=Enum.Font.GothamBold X.TextScaled=true X.AutoButtonColor=false local C=Instance.new("\084\101\120\116\066\117\116\116\111\110",j)C.Size=UDim2.new(0,30,0,30)C.Position=UDim2.new(1,-30,0,0)C.Text="\088"C.TextColor3=Color3.new(1,.4,.4)C.Font=Enum.Font.GothamBold C.TextScaled=true C.BackgroundTransparency=1 local c=Instance.new("\084\101\120\116\066\117\116\116\111\110",j)c.Size=UDim2.new(0,30,0,30)c.Position=UDim2.new(1,-60,0,0)c.Text="-"c.TextColor3=Color3.fromRGB(255,255,255)c.Font=Enum.Font.GothamBold c.TextScaled=true c.BackgroundTransparency=1 local T=Instance.new("\084\101\120\116\066\117\116\116\111\110",j)T.Size=UDim2.new(0,30,0,25)T.Position=UDim2.new(1,-90,0,2)T.Text="\082\101\115\101\116"T.BackgroundColor3=Color3.fromRGB(60,60,60)T.TextColor3=Color3.new(1,1,1)T.Font=Enum.Font.GothamBold T.TextScaled=true local a=Instance.new("\085\073\067\111\114\110\101\114",T)a.CornerRadius=UDim.new(0,6)T.MouseEnter:Connect(function()(h:Create(T,TweenInfo.new(.2),{BackgroundColor3=Color3.fromRGB(90,90,90)})):Play()end)T.MouseLeave:Connect(function()(h:Create(T,TweenInfo.new(.2),{BackgroundColor3=Color3.fromRGB(60,60,60)})):Play()end)local E=Instance.new("\083\099\114\111\108\108\105\110\103\070\114\097\109\101",j)E.Size=UDim2.new(1,-10,1,-95)E.Position=UDim2.new(0,5,0,35)E.BackgroundTransparency=1 E.CanvasSize=UDim2.new(0,0,0,0)E.ScrollBarThickness=6 E.AutomaticCanvasSize=Enum.AutomaticSize.Y E.VerticalScrollBarInset=Enum.ScrollBarInset.Always local t=Instance.new("\085\073\076\105\115\116\076\097\121\111\117\116",E)t.Padding=UDim.new(0,5)t.SortOrder=Enum.SortOrder.LayoutOrder local z={XRay=function()game.Lighting.Ambient=Color3.fromRGB(180,180,255)end;Blur=function()local h=Instance.new("\066\108\117\114\069\102\102\101\099\116",game.Lighting)h.Size=24 end,Night=function()game.Lighting.Ambient=Color3.fromRGB(30,30,80)end;Day=function()game.Lighting.Ambient=Color3.fromRGB(255,255,255)end;Antilag=function()for h,B in ipairs(game:GetDescendants())do if B:IsA("\080\097\114\116\105\099\108\101\069\109\105\116\116\101\114")or B:IsA("\084\114\097\105\108")or B:IsA("\068\101\099\097\108")then B.Enabled=false end end end}for h,B in ipairs({"\088\082\097\121";"\066\108\117\114";"\078\105\103\104\116";"\068\097\121";"\065\110\116\105\108\097\103"})do local g=Instance.new("\084\101\120\116\066\117\116\116\111\110",E)g.Size=UDim2.new(1,-10,0,25)g.Text=B g.BackgroundColor3=Color3.fromRGB(70,70,70)g.TextColor3=Color3.new(1,1,1)g.Font=Enum.Font.SourceSans g.TextScaled=true local K=Instance.new("\085\073\067\111\114\110\101\114",g)K.CornerRadius=UDim.new(0,6)g.MouseButton1Click:Connect(function()local h=z[B]if h then h()end end)end T.MouseButton1Click:Connect(function()for h,B in ipairs(game.Lighting:GetChildren())do if B:IsA("\066\108\117\114\069\102\102\101\099\116")then B:Destroy()end end game.Lighting.Ambient=Color3.fromRGB(127,127,127)end)local m=Instance.new("\070\114\097\109\101",j)m.Size=UDim2.new(1,-20,0,25)m.Position=UDim2.new(0,10,1,-30)m.BackgroundTransparency=1 local N=Instance.new("\084\101\120\116\066\111\120",m)N.Size=UDim2.new(.8,0,1,0)N.Position=UDim2.new(0,0,0,0)N.PlaceholderText="\069\110\116\101\114 \115\104\097\100\101\114 \085\082\076"N.Font=Enum.Font.Code N.TextSize=14 N.Text=""N.BackgroundColor3=Color3.fromRGB(50,50,50)N.TextColor3=Color3.new(1,1,1)N.TextScaled=true local Z=Instance.new("\085\073\067\111\114\110\101\114",N)Z.CornerRadius=UDim.new(0,5)local u=Instance.new("\084\101\120\116\066\117\116\116\111\110",m)u.Size=UDim2.new(.2,-5,1,0)u.Position=UDim2.new(.8,5,0,0)u.Text="\069\110\116\101\114"u.BackgroundColor3=Color3.fromRGB(60,60,60)u.TextColor3=Color3.new(1,1,1)u.Font=Enum.Font.GothamBold u.TextScaled=true local i=Instance.new("\085\073\067\111\114\110\101\114",u)i.CornerRadius=UDim.new(0,6)local function e()local h=N.Text if h~=""then local B,K=pcall(function()(loadstring(game:HttpGet(h)))()end)if B then pcall(function()g:SetCore("\083\101\110\100\078\111\116\105\102\105\099\097\116\105\111\110",{Title="\083\104\097\100\101\114 \076\111\097\100\101\100";Text="\089\111\117\114 \115\104\097\100\101\114 \119\097\115 \097\112\112\108\105\101\100\046",Duration=4})end)else pcall(function()g:SetCore("\083\101\110\100\078\111\116\105\102\105\099\097\116\105\111\110",{Title="\083\104\097\100\101\114 \069\114\114\111\114",Text=tostring(K);Duration=5})end)end end end N.FocusLost:Connect(function(h)if h then e()end end)u.MouseButton1Click:Connect(e)local L=false c.MouseButton1Click:Connect(function()L=not L E.Visible=not L m.Visible=not L T.Visible=not L j:TweenSize(L and UDim2.new(0,300,0,40)or UDim2.new(0,300,0,200),"\079\117\116","\081\117\097\100",.3,true)c.Text=L and"\043"or"-"end)C.MouseButton1Click:Connect(function()x:Destroy()end)
+-- Script was deobfuscated with 5 seconds of work. very easy!
+local tweenService = game:GetService("TweenService")
+local players = game:GetService("Players")
+local starterGui = game:GetService("StarterGui")
+local localPlayer = players.LocalPlayer
+local playerGui = localPlayer:WaitForChild("PlayerGui")
+pcall(function()
+    starterGui:SetCore("SendNotification", {
+        Title = "Enjoy!",
+        Text = "Made by youcannotsth",
+        Duration = 5
+    })
+end)
+local screenGui = Instance.new("ScreenGui", playerGui)
+screenGui.Name = "ShaderPanel"
+screenGui.ResetOnSpawn = false
+local mainFrame = Instance.new("Frame", screenGui)
+mainFrame.Size = UDim2.new(0, 300, 0, 200)
+mainFrame.Position = UDim2.new(0.05, 0, 0.3, 0)
+mainFrame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+mainFrame.BorderSizePixel = 0
+mainFrame.Active = true
+mainFrame.Draggable = true
+mainFrame.Name = "MainPanel"
+local uiCorner = Instance.new("UICorner", mainFrame)
+uiCorner.CornerRadius = UDim.new(0, 10)
+local titleText = Instance.new("TextButton", mainFrame)
+titleText.Size = UDim2.new(1, -90, 0, 30)
+titleText.Position = UDim2.new(0, 0, 0, 0)
+titleText.Text = "Shader Panel"
+titleText.TextColor3 = Color3.new(1, 1, 1)
+titleText.BackgroundTransparency = 1
+titleText.Font = Enum.Font.GothamBold
+titleText.TextScaled = true
+titleText.AutoButtonColor = false
+local closeButton = Instance.new("TextButton", mainFrame)
+closeButton.Size = UDim2.new(0, 30, 0, 30)
+closeButton.Position = UDim2.new(1, -30, 0, 0)
+closeButton.Text = "X"
+closeButton.TextColor3 = Color3.new(1, 0.4, 0.4)
+closeButton.Font = Enum.Font.GothamBold
+closeButton.TextScaled = true
+closeButton.BackgroundTransparency = 1
+local minimizeButton = Instance.new("TextButton", mainFrame)
+minimizeButton.Size = UDim2.new(0, 30, 0, 30)
+minimizeButton.Position = UDim2.new(1, -60, 0, 0)
+minimizeButton.Text = "-"
+minimizeButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+minimizeButton.Font = Enum.Font.GothamBold
+minimizeButton.TextScaled = true
+minimizeButton.BackgroundTransparency = 1
+local resetButton = Instance.new("TextButton", mainFrame)
+resetButton.Size = UDim2.new(0, 30, 0, 25)
+resetButton.Position = UDim2.new(1, -90, 0, 2)
+resetButton.Text = "Reset"
+resetButton.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+resetButton.TextColor3 = Color3.new(1, 1, 1)
+resetButton.Font = Enum.Font.GothamBold
+resetButton.TextScaled = true
+local resetCorner = Instance.new("UICorner", resetButton)
+resetCorner.CornerRadius = UDim.new(0, 6)
+resetButton.MouseEnter:Connect(function()
+    tweenService:Create(resetButton, TweenInfo.new(0.2), { BackgroundColor3 = Color3.fromRGB(90, 90, 90) }):Play()
+end)
+resetButton.MouseLeave:Connect(function()
+    tweenService:Create(resetButton, TweenInfo.new(0.2), { BackgroundColor3 = Color3.fromRGB(60, 60, 60) }):Play()
+end)
+local scrollFrame = Instance.new("ScrollingFrame", mainFrame)
+scrollFrame.Size = UDim2.new(1, -10, 1, -95)
+scrollFrame.Position = UDim2.new(0, 5, 0, 35)
+scrollFrame.BackgroundTransparency = 1
+scrollFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
+scrollFrame.ScrollBarThickness = 6
+scrollFrame.AutomaticCanvasSize = Enum.AutomaticSize.Y
+scrollFrame.VerticalScrollBarInset = Enum.ScrollBarInset.Always
+local layout = Instance.new("UIListLayout", scrollFrame)
+layout.Padding = UDim.new(0, 5)
+layout.SortOrder = Enum.SortOrder.LayoutOrder
+local shaderActions = {
+    XRay = function()
+        game.Lighting.Ambient = Color3.fromRGB(180, 180, 255)
+    end,
+    Blur = function()
+        local blur = Instance.new("BlurEffect", game.Lighting)
+        blur.Size = 24
+    end,
+    Night = function()
+        game.Lighting.Ambient = Color3.fromRGB(30, 30, 80)
+    end,
+    Day = function()
+        game.Lighting.Ambient = Color3.fromRGB(255, 255, 255)
+    end,
+    Antilag = function()
+        for _, obj in ipairs(game:GetDescendants()) do
+            if obj:IsA("ParticleEmitter") or obj:IsA("Trail") or obj:IsA("Decal") then
+                obj.Enabled = false
+            end
+        end
+    end
+}
+for _, shaderName in ipairs({ "XRay", "Blur", "Night", "Day", "Antilag" }) do
+    local button = Instance.new("TextButton", scrollFrame)
+    button.Size = UDim2.new(1, -10, 0, 25)
+    button.Text = shaderName
+    button.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+    button.TextColor3 = Color3.new(1, 1, 1)
+    button.Font = Enum.Font.SourceSans
+    button.TextScaled = true
+
+    local corner = Instance.new("UICorner", button)
+    corner.CornerRadius = UDim.new(0, 6)
+
+    button.MouseButton1Click:Connect(function()
+        local action = shaderActions[shaderName]
+        if action then
+            action()
+        end
+    end)
+end
+resetButton.MouseButton1Click:Connect(function()
+    for _, v in ipairs(game.Lighting:GetChildren()) do
+        if v:IsA("BlurEffect") then
+            v:Destroy()
+        end
+    end
+    game.Lighting.Ambient = Color3.fromRGB(127, 127, 127)
+end)
+local bottomFrame = Instance.new("Frame", mainFrame)
+bottomFrame.Size = UDim2.new(1, -20, 0, 25)
+bottomFrame.Position = UDim2.new(0, 10, 1, -30)
+bottomFrame.BackgroundTransparency = 1
+local urlBox = Instance.new("TextBox", bottomFrame)
+urlBox.Size = UDim2.new(0.8, 0, 1, 0)
+urlBox.Position = UDim2.new(0, 0, 0, 0)
+urlBox.PlaceholderText = "Enter shader URL"
+urlBox.Font = Enum.Font.Code
+urlBox.TextSize = 14
+urlBox.Text = ""
+urlBox.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+urlBox.TextColor3 = Color3.new(1, 1, 1)
+urlBox.TextScaled = true
+local urlCorner = Instance.new("UICorner", urlBox)
+urlCorner.CornerRadius = UDim.new(0, 5)
+local enterButton = Instance.new("TextButton", bottomFrame)
+enterButton.Size = UDim2.new(0.2, -5, 1, 0)
+enterButton.Position = UDim2.new(0.8, 5, 0, 0)
+enterButton.Text = "Enter"
+enterButton.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+enterButton.TextColor3 = Color3.new(1, 1, 1)
+enterButton.Font = Enum.Font.GothamBold
+enterButton.TextScaled = true
+local enterCorner = Instance.new("UICorner", enterButton)
+enterCorner.CornerRadius = UDim.new(0, 6)
+local function executeURL()
+    local url = urlBox.Text
+    if url ~= "" then
+        local success, result = pcall(function()
+            loadstring(game:HttpGet(url))()
+        end)
+
+        if success then
+            pcall(function()
+                starterGui:SetCore("SendNotification", {
+                    Title = "Shader Loaded",
+                    Text = "Your shader was applied.",
+                    Duration = 4
+                })
+            end)
+        else
+            pcall(function()
+                starterGui:SetCore("SendNotification", {
+                    Title = "Shader Error",
+                    Text = tostring(result),
+                    Duration = 5
+                })
+            end)
+        end
+    end
+end
+urlBox.FocusLost:Connect(function(enterPressed)
+    if enterPressed then
+        executeURL()
+    end
+end)
+enterButton.MouseButton1Click:Connect(executeURL)
+local collapsed = false
+minimizeButton.MouseButton1Click:Connect(function()
+    collapsed = not collapsed
+    scrollFrame.Visible = not collapsed
+    bottomFrame.Visible = not collapsed
+    resetButton.Visible = not collapsed
+
+    mainFrame:TweenSize(collapsed and UDim2.new(0, 300, 0, 40) or UDim2.new(0, 300, 0, 200), "Out", "Quad", 0.3, true)
+    minimizeButton.Text = collapsed and "+" or "-"
+end)
+closeButton.MouseButton1Click:Connect(function()
+    screenGui:Destroy()
+end)
